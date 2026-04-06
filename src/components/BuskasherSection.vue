@@ -12,19 +12,19 @@ const { isVisible } = useIntersection(sectionRef)
 const galleryImages = [
   {
     id: 1,
-    src: '../../src/assets/products-cards.png',
+    src: new URL('@/assets/products-cards.png', import.meta.url).href,
     alt: 'Busca de produtos com exibição no modo "Card"',
     caption: 'Busca de Produtos - Cards',
   },
   {
     id: 2,
-    src: '../../src/assets/products-list.png',
+    src: new URL('@/assets/products-list.png', import.meta.url).href,
     alt: 'Busca de produtos com exibição no modo "Lista"',
     caption: 'Busca de Produtos - Lista',
   },
   {
     id: 3,
-    src: '../../src/assets/products-details.png',
+    src: new URL('@/assets/products-details.png', import.meta.url).href,
     alt: 'Detalhes de um produto específico',
     caption: 'Detalhes do Produto',
   }
