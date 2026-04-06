@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "manifesto": "Manifesto",
+    "projects": "Projetos",
+    "languages": "Idiomas",
+    "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "name": "Fernando Pinto",
+    "role": "Desenvolvedor Frontend",
+    "tagline": "Criando interfaces que retêm, engajam e identificam.",
+    "cta_primary": "Ver Projetos",
+    "badge": "Disponível para contratação"
+  },
+  "manifesto": {
+    "headline": "Frontend não é apenas design.",
+    "headline_em": "É retenção e identidade.",
+    "body_1": "Cada pixel tem uma intenção. Cada animação, uma razão. O Frontend de alta qualidade não é apenas ornamentação.",
+    "body_2": "Eu construo interfaces que pensam como produtos: estratégicas, acessíveis, e com identidade forte o suficiente para serem lembradas.",
+    "stat_1_value": "100%",
+    "stat_1_label": "Responsivo",
+    "stat_2_value": "A11y",
+    "stat_2_label": "Acessível",
+    "quote": "\"A perfeição é alcançada não quando não há mais nada a acrescentar, mas quando não há mais nada a retirar.\""
+  },
+  "buskasher": {
+    "tag": "Case Principal",
+    "title": "Buskasher",
+    "subtitle": "Busca Inteligente de Alimentos Restritos",
+    "description": "Plataforma especializada na busca e catalogação de produtos alimentícios com restrições dietéticas Kosher. Atualmente focado no desenvolvimento da V2, priorizando a escalabilidade da arquitetura e a otimização da experiência do usuário administrativo. Por questões contratuais, detalhes técnicos e visuais desta versão são mantidos sob sigilo até o lançamento oficial.",
+    "status_v1": "V1 - Em Produção",
+    "status_v2": "V2 - Em Desenvolvimento",
+    "tech_label": "Stack",
+    "gallery_label": "Galeria do Projeto",
+    "click_hint": "Clique para ampliar",
+    "modal_close": "Fechar visualização",
+    "modal_prev": "Imagem anterior",
+    "modal_next": "Próxima imagem",
+    "nda_notice": "Imagens da segunda versão ainda não podem ser divulgadas por contrato de confidenciabilidade."
+  },
+  "languages": {
+    "tag": "Competências Linguísticas",
+    "title": "Comunicação sem fronteiras.",
+    "portuguese_level": "Nativo",
+    "portuguese_label": "Português",
+    "portuguese_detail": "Falante nativo com habilidades avançadas de escrita e comunicação profissional",
+    "english_level": "Fluente",
+    "english_label": "Inglês",
+    "english_detail": "Comunicação técnica, documentação e colaboração internacional",
+    "tech_note_title": "Nota Técnica",
+    "tech_note_body": "Este portfólio suporta troca dinâmica de idioma via vue-i18n + Pinia",
+    "toggle_hint": "Alterne o idioma no menu para ver em ação →"
+  },
+  "contact": {
+    "tag": "Contato",
+    "title": "Vamos construir algo.",
+    "body": "Aberto a colaborações, freelancing e conversas sobre tecnologia.",
+    "email_label": "Email",
+    "github_label": "GitHub",
+    "linkedin_label": "LinkedIn"
+  },
+  "footer": {
+    "built_with": "Construído com Vue 3 · Pinia · Tailwind CSS",
+    "rights": "Fernando Pinto — Todos os direitos reservados"
+  }
+}

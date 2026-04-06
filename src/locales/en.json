@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "manifesto": "Manifesto",
+    "projects": "Projects",
+    "languages": "Languages",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Fernando Pinto",
+    "role": "Frontend Developer",
+    "tagline": "Building interfaces that retain, engage, and identify.",
+    "cta_primary": "See Projects",
+    "badge": "Open to hire"
+  },
+  "manifesto": {
+    "headline": "Frontend is not just design.",
+    "headline_em": "It's retention and identity.",
+    "body_1": "Every pixel has a purpose. Every animation, a reason. High-quality Frontend isn't just ornamentation.",
+    "body_2": "I build interfaces that think like products: strategic, accessible, with a strong enough identity to be remembered.",
+    "stat_1_value": "100%",
+    "stat_1_label": "Responsive",
+    "stat_2_value": "A11y",
+    "stat_2_label": "Accessible",
+    "quote": "\"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away\""
+  },
+  "buskasher": {
+    "tag": "Main Case",
+    "title": "Buskasher",
+    "subtitle": "Intelligent Kosher Food Search Engine",
+    "description": "A specialized platform for searching and cataloging food products with Kosher dietary restrictions. Currently focused on the development of V2, prioritizing architectural scalability and administrative user experience (UX) optimization. Due to contractual obligations, technical and visual details of this version remain confidential until the official release.",
+    "status_v1": "V1 - In Production",
+    "status_v2": "V2 - In Development",
+    "tech_label": "Stack",
+    "gallery_label": "Project Gallery",
+    "click_hint": "Click to enlarge",
+    "modal_close": "Close viewer",
+    "modal_prev": "Previous image",
+    "modal_next": "Next image",
+    "nda_notice": "V2 images cannot be disclosed yet due to confidentiality agreement."
+  },
+  "languages": {
+    "tag": "Language Skills",
+    "title": "Communication without borders.",
+    "portuguese_level": "Native",
+    "portuguese_label": "Portuguese",
+    "portuguese_detail": "Native speaker with professional writing and communication skills",
+    "english_level": "Fluent",
+    "english_label": "English",
+    "english_detail": "Technical communication, documentation and international collaboration",
+    "tech_note_title": "Technical Note",
+    "tech_note_body": "This portfolio supports dynamic language switching via vue-i18n + Pinia",
+    "toggle_hint": "Toggle the language in the menu to see it in action →"
+  },
+  "contact": {
+    "tag": "Contact",
+    "title": "Let's build something.",
+    "body": "Open to collaborations, freelance work, and conversations about tech.",
+    "email_label": "Email",
+    "github_label": "GitHub",
+    "linkedin_label": "LinkedIn"
+  },
+  "footer": {
+    "built_with": "Built with Vue 3 · Pinia · Tailwind CSS",
+    "rights": "Fernando Pinto — All rights reserved"
+  }
+}
