@@ -4,7 +4,6 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Portfólio carregado e pronto.");
 
     // 1. Scroll Fade-In (Intersection Observer)
     const observerOptions = {
