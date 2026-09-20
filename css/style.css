@@ -3,16 +3,21 @@
  * Estilo "Midimalista": 70% Base Limpa / 30% Elementos Afetivos, Texturas e Cores Vibrantes
  */
 :root {
-    --primary-color: #0ea5e9; /* Cor vibrante para o toque de 30% (Azul elétrico) */
-    --primary-hover: #0284c7;
+    --primary-color: #0284c7; /* Sky 600 - Calmo, sóbrio e em conformidade WCAG AA (4.54:1) */
+    --primary-hover: #0369a1; /* Sky 700 */
     --text-main: #1e293b;
     --text-muted: #64748b;
     --bg-light: #f8fafc;
-    --bg-pattern: radial-gradient(#cbd5e1 1px, transparent 1px);
-    --badge-bg: #e0f2fe;
-    --badge-text: #0369a1;
+    --badge-bg: #f1f5f9;
+    --badge-text: #334155;
     --accent-blob: #bae6fd;
     --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+    --navbar-height: 64px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--navbar-height);
 }
 
 body {
@@ -23,12 +28,14 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Base Limpa com Textura Sutil (Midimalismo) */
+/* Base Limpa com Superfície Neutra Difusa (Midimalismo de Engenharia / Quieter) */
 .hero-section {
-    background-color: var(--bg-light);
-    background-image: var(--bg-pattern);
-    background-size: 24px 24px;
-    background-position: center;
+    background: linear-gradient(180deg, #ffffff 0%, var(--bg-light) 100%);
+    min-height: calc(100vh - var(--navbar-height));
+    min-height: calc(100dvh - var(--navbar-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Tipografia responsiva usando clamp para garantir que não quebre */
@@ -58,59 +65,30 @@ body {
     }
 }
 
-/* Badges de Skills - Cores mais afetivas */
+/* Badges de Skills no Hero - Refinamento Quieter (neutro elegante, foco no conteúdo) */
 .skills-badges .badge {
     font-size: 0.85rem;
-    padding: 0.6em 1em;
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
+    padding: 0.55em 0.95em;
     background-color: var(--badge-bg);
     color: var(--badge-text);
-    font-weight: 600;
+    font-weight: 500;
     border-radius: 8px;
-    border: 1px solid #7dd3fc;
-    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
     display: inline-flex;
     align-items: center;
-    gap: 0.4em;
+    gap: 0.45em;
 }
 
 .skills-badges .badge:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    background-color: #e2e8f0;
+    color: #0f172a;
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
-/* Specific Skill Colors */
-.skill-html { background-color: #ffece6 !important; color: #e34f26 !important; border-color: #ffc2b3 !important; }
-.skill-html:hover { background-color: #ffd8cc !important; }
-
-.skill-css { background-color: #e6f2ff !important; color: #1572b6 !important; border-color: #b3d4ff !important; }
-.skill-css:hover { background-color: #cce4ff !important; }
-
-.skill-js { background-color: #fffde6 !important; color: #b39b00 !important; border-color: #ffeb80 !important; }
-.skill-js:hover { background-color: #fff9cc !important; }
-
-.skill-react { background-color: #e6fcff !important; color: #0c86a8 !important; border-color: #b3f0ff !important; }
-.skill-react:hover { background-color: #ccf8ff !important; }
-
-.skill-bootstrap { background-color: #f3e8ff !important; color: #7952b3 !important; border-color: #d8b4fe !important; }
-.skill-bootstrap:hover { background-color: #e9d5ff !important; }
-
-.skill-ts { background-color: #e6f0ff !important; color: #3178c6 !important; border-color: #b3d4ff !important; }
-.skill-ts:hover { background-color: #cce0ff !important; }
-
-.skill-php { background-color: #eaeefa !important; color: #777bb4 !important; border-color: #c6cdf0 !important; }
-.skill-php:hover { background-color: #d6ddf5 !important; }
-
-.skill-mysql { background-color: #e6f7ff !important; color: #4479a1 !important; border-color: #b3e0ff !important; }
-.skill-mysql:hover { background-color: #cceeff !important; }
-
-.skill-scrum { background-color: #e6ffe6 !important; color: #2e8b57 !important; border-color: #b3ffb3 !important; }
-.skill-scrum:hover { background-color: #ccffcc !important; }
-
-
-
-/* Botões Customizados */
+/* Botões Customizados - Quieter (elevações e brilhos comedidos) */
 .btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
@@ -124,7 +102,7 @@ body {
     border-color: var(--primary-hover);
     color: #ffffff;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+    box-shadow: 0 3px 8px rgba(2, 132, 199, 0.2);
 }
 
 /* Grid de Skills (BLO02) */
@@ -134,9 +112,9 @@ body {
 }
 
 .skill-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05) !important;
-    border-color: #e2e8f0 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px -2px rgba(0, 0, 0, 0.04) !important;
+    border-color: #cbd5e1 !important;
 }
 
 /* Estrelas de Experiência */
@@ -148,7 +126,7 @@ body {
     margin: 0 1px;
 }
 .star.filled {
-    color: #fbbf24; /* Amarelo ouro (vibrante, dentro dos 30% midimalistas) */
+    color: #f59e0b; /* Âmbar sóbrio */
 }
 .star.empty {
     color: #e2e8f0; /* Cinza claro suave */
@@ -169,156 +147,133 @@ body {
     transform: translateY(-1px);
 }
 
-/* Cartões de Projeto (BLO03) */
+/* Cartões de Projeto (BLO03) - Quieter (elevação controlada) */
 .project-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px -2px rgba(0, 0, 0, 0.06) !important;
 }
 
 .project-img-placeholder {
-    transition: opacity 0.3s ease;
+    transition: opacity 0.25s ease;
 }
 
 .project-card:hover .project-img-placeholder {
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
-/* Tooltip/Card Flutuante para Trade-offs (US02) */
-.tech-hover-container {
-    position: relative;
-    display: inline-block;
+/* Barra de Navegação Fixa (Header / Navbar) */
+.main-navbar {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    transition: box-shadow 0.25s ease;
 }
 
-.tech-hover-card {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    width: 320px;
-    background-color: #ffffff;
+.main-navbar .nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-main);
+    padding: 0.5rem 0.85rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.main-navbar .nav-link:hover,
+.main-navbar .nav-link:focus,
+.main-navbar .nav-link.active {
+    color: var(--primary-color);
+    background-color: rgba(2, 132, 199, 0.08);
+}
+
+/* Abas Táteis Inline de Trade-offs (Projetos - US02 & US06) */
+.trade-off-tabs .btn-tradeoff {
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.45rem 0.9rem;
+    border-radius: 8px;
+    color: var(--text-muted);
+    background-color: #f1f5f9;
     border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 1rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    transition: all 0.3s ease;
-    cursor: default;
-    pointer-events: none;
+    transition: all 0.2s ease;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    cursor: pointer;
 }
 
-.tech-hover-container:hover .tech-hover-card {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(-50%) translateY(-10px);
-    pointer-events: auto;
+.trade-off-tabs .btn-tradeoff:hover {
+    color: var(--text-main);
+    background-color: #e2e8f0;
 }
 
-/* Seta apontando para baixo (Técnico) */
-.tech-hover-card::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -8px;
-    border-width: 8px;
-    border-style: solid;
-    border-color: #ffffff transparent transparent transparent;
-}
-.tech-hover-card::before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -9px;
-    border-width: 9px;
-    border-style: solid;
-    border-color: #e2e8f0 transparent transparent transparent;
+.trade-off-tabs .btn-tradeoff:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
-/* Tooltip/Card Flutuante para Negócios (US06) */
-.biz-hover-container {
-    position: relative;
-    display: inline-block;
+.trade-off-tabs .btn-tradeoff.active {
+    color: #ffffff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 1px 4px rgba(2, 132, 199, 0.2);
 }
 
-.biz-hover-card {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    width: 320px;
-    background-color: #f8fafc; 
-    border: 1px solid #10b981; 
-    border-radius: 12px;
-    padding: 1rem;
-    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.15); 
-    z-index: 1000;
-    transition: all 0.3s ease;
-    cursor: default;
-    pointer-events: none;
+.trade-off-tabs .btn-tradeoff[id*="biz"].active {
+    background-color: #059669;
+    border-color: #059669;
+    box-shadow: 0 1px 4px rgba(5, 150, 105, 0.2);
 }
 
-.biz-hover-container:hover .biz-hover-card {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(-50%) translateY(-10px);
-    pointer-events: auto;
+.trade-off-content {
+    background-color: #f8fafc;
+    border-color: #e2e8f0 !important;
+    min-height: 140px;
 }
 
-/* Seta apontando para baixo (Negócios) */
-.biz-hover-card::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -8px;
-    border-width: 8px;
-    border-style: solid;
-    border-color: #f8fafc transparent transparent transparent;
-}
-.biz-hover-card::before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -9px;
-    border-width: 9px;
-    border-style: solid;
-    border-color: #10b981 transparent transparent transparent;
+/* Timeline Marker (Experiências) */
+.timeline-marker {
+    width: 16px;
+    height: 16px;
+    left: -33px;
+    top: 4px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
 }
 
-/* Ajustes no mobile para não cortar os cards na tela */
-@media (max-width: 768px) {
-    .tech-hover-card, .biz-hover-card {
-        left: 0;
-        transform: translateX(0) translateY(10px);
-    }
-    .tech-hover-container:hover .tech-hover-card,
-    .biz-hover-container:hover .biz-hover-card {
-        transform: translateX(0) translateY(-10px);
-    }
-    .tech-hover-card::after, .tech-hover-card::before,
-    .biz-hover-card::after, .biz-hover-card::before {
-        left: 30px;
-    }
-}
-
-/* Cartões de Formação (US08) */
+/* Cartões de Formação - Destaque Institucional (US08 / bolder) */
 .formacao-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid #e2e8f0 !important;
 }
 
 .formacao-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px -2px rgba(0, 0, 0, 0.04) !important;
+}
+
+.formacao-card.formacao-destaque {
+    border-top: 3px solid var(--primary-color) !important;
+    background-color: #ffffff;
+}
+
+.badge-status-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+.callout-projeto-real {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #059669 !important;
 }
 
 @media (min-width: 768px) {
@@ -327,11 +282,73 @@ body {
     }
 }
 
-/* Interatividade JS (US02, US10, etc) */
+/* Hardening: Resiliência contra overflow de texto, quebra de layout e fallbacks de imagem */
+.card, .project-card, .formacao-card, .skill-box {
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.img-fallback-container {
+    height: 200px;
+    background-color: #f1f5f9;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+}
+
+/* Onboarding: Dica de Avaliação e Atalhos (US12 / onboard) */
+.onboarding-tip {
+    background-color: #f0f9ff;
+    border: 1px solid #bae6fd !important;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+kbd {
+    background-color: #ffffff;
+    color: var(--text-main);
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-size: 0.75rem;
+    box-shadow: 0 1px 0 #94a3b8;
+    font-family: monospace;
+}
+
+/* Polish: Hobby Cards, Fechamento Peak-End e Foco Acessível (US13 / polish) */
+.hobby-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px -2px rgba(0, 0, 0, 0.04) !important;
+}
+
+.cta-closing-card {
+    border: 1px solid #e2e8f0 !important;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+}
+
+:focus-visible {
+    outline: 2px solid var(--primary-color) !important;
+    outline-offset: 2px !important;
+}
+
+a:focus-visible, button:focus-visible {
+    border-radius: 6px;
+}
+
+/* Interatividade JS - Quieter (transições sutis e sem saltos bruscos) */
 .reveal-hidden {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
+    transform: translateY(14px);
+    transition: opacity 0.4s ease-out, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-visible {
@@ -345,12 +362,12 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 1050;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
 }
 
 #back-to-top:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1) !important;
 }
 
 @keyframes fadeIn {
@@ -361,3 +378,129 @@ body {
 .cursor-pointer {
     cursor: pointer;
 }
+
+/* Suporte à Acessibilidade de Movimento Reduzido (WCAG AA 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ==========================================================================
+   Adaptações Responsivas, Dispositivos Móveis e Impressão (Impeccable Adapt)
+   ========================================================================== */
+
+/* Menu Móvel Compacto & Touch Targets (Dispositivos < 992px) */
+@media (max-width: 991.98px) {
+    .main-navbar .navbar-collapse {
+        background-color: #ffffff;
+        padding: 1rem;
+        border-radius: 12px;
+        margin-top: 0.5rem;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e2e8f0;
+    }
+    .main-navbar .nav-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        padding: 0.65rem 1rem;
+        margin-bottom: 0.25rem;
+    }
+    .main-navbar .btn-primary {
+        margin-top: 0.5rem;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Telas Médias e Smartphones (< 768px) */
+@media (max-width: 767.98px) {
+    .timeline-container {
+        margin-left: 1rem;
+    }
+    .hero-summary {
+        font-size: 1.05rem;
+    }
+    .trade-off-content {
+        min-height: auto;
+    }
+}
+
+/* Telas Ultra-Compactas (< 576px / 360px–414px) */
+@media (max-width: 575.98px) {
+    .skill-box {
+        padding: 1rem !important;
+    }
+    .skill-box h6 {
+        font-size: 0.9rem;
+    }
+    .skill-box svg {
+        width: 28px;
+        height: 28px;
+    }
+    .skills-badges .badge {
+        font-size: 0.8rem;
+        padding: 0.45em 0.8em;
+    }
+}
+
+/* Feedback Tátil para Dispositivos Touch */
+@media (hover: none) and (pointer: coarse) {
+    .btn-primary:active,
+    .btn-outline-primary:active,
+    .btn-outline-secondary:active,
+    .trade-off-tabs .btn-tradeoff:active {
+        transform: scale(0.98);
+        filter: brightness(0.96);
+    }
+}
+
+/* Adaptação de Impressão e Exportação para PDF (Web → Print) */
+@media print {
+    header.sticky-top,
+    .main-navbar,
+    #back-to-top,
+    .filter-btn,
+    .trade-off-tabs,
+    .nav-pills {
+        display: none !important;
+    }
+
+    body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 10.5pt;
+        line-height: 1.4;
+    }
+
+    .hero-section {
+        min-height: auto !important;
+        padding: 1.5rem 0 !important;
+        background: none !important;
+    }
+
+    .card, .skill-box, .formacao-card {
+        box-shadow: none !important;
+        border: 1px solid #cbd5e1 !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .reveal-hidden {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 80%;
+        color: #475569;
+    }
+}
+

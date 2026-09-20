@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-20T21:30:00Z",
+  "title": "Design System: Fernando Rodrigues Pinto - Portfólio (Pós-Refinamento Consolidado)",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Azul Céu Técnico (Sky 600)",
+        "canonical": "#0284c7",
+        "tonalRamp": ["#e0f2fe", "#bae6fd", "#7dd3fc", "#38bdf8", "#0284c7", "#0369a1", "#075985"]
+      },
+      "neutral-bg": {
+        "role": "neutral",
+        "displayName": "Slate Claro",
+        "canonical": "#f8fafc",
+        "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1"]
+      },
+      "text-main": {
+        "role": "neutral",
+        "displayName": "Ardósia Escura",
+        "canonical": "#1e293b",
+        "tonalRamp": ["#64748b", "#475569", "#334155", "#1e293b", "#0f172a"]
+      },
+      "success": {
+        "role": "functional",
+        "displayName": "Verde Esmeralda Funcional",
+        "canonical": "#059669",
+        "tonalRamp": ["#d1fae5", "#a7f3d0", "#6ee7b7", "#34d399", "#10b981", "#059669"]
+      },
+      "star-gold": {
+        "role": "functional",
+        "displayName": "Ouro Âmbar",
+        "canonical": "#fbbf24",
+        "tonalRamp": ["#fef3c7", "#fde68a", "#fcd34d", "#fbbf24", "#f59e0b"]
+      },
+      "chip-neutral": {
+        "role": "neutral",
+        "displayName": "Chip Slate Neutro",
+        "canonical": "#f1f5f9",
+        "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#334155"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display Hero",
+        "purpose": "Nome pessoal em destaque no topo da página (clamp(2.1rem, 4vw, 2.75rem))."
+      },
+      "headline": {
+        "displayName": "Títulos de Seção",
+        "purpose": "H2 delimitadores de cada bloco temático com âncoras navegáveis."
+      },
+      "title": {
+        "displayName": "Títulos de Componentes",
+        "purpose": "H3 e H5 em cartões de projeto, formação e cargos profissionais."
+      },
+      "body": {
+        "displayName": "Texto Corrido",
+        "purpose": "Parágrafos descritivos, biografia, trade-offs e estudos de caso."
+      },
+      "label": {
+        "displayName": "Rótulos e Badges",
+        "purpose": "Tags de tecnologia, chips de navegação rápida e metadados de escaneabilidade."
+      }
+    },
+    "shadows": [
+      {
+        "name": "micro-lift",
+        "value": "0 2px 4px rgba(0, 0, 0, 0.04)",
+        "purpose": "Elevação sutil de badges e chips no repouso/hover moderado."
+      },
+      {
+        "name": "card-hover",
+        "value": "0 10px 20px -3px rgba(0, 0, 0, 0.06)",
+        "purpose": "Elevação suave calibrada para cartões de projetos e hobbies sem vibração agressiva."
+      },
+      {
+        "name": "floating-tradeoff",
+        "value": "0 8px 16px -2px rgba(0, 0, 0, 0.06)",
+        "purpose": "Sombra destacada para containers de trade-off técnico e dicas de onboarding."
+      },
+      {
+        "name": "focus-ring",
+        "value": "0 0 0 2px #0284c7",
+        "purpose": "Anel de foco de alta precisão para acessibilidade por teclado (WCAG 2.4.7)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "all 0.25s ease",
+        "purpose": "Transições suaves de elevação e cores em cartões e abas."
+      },
+      {
+        "name": "ease-quick",
+        "value": "all 0.15s ease",
+        "purpose": "Resposta tátil imediata para botões de trade-off, cópia e links."
+      }
+    ],
+    "breakpoints": [
+      { "name": "xs", "value": "576px" },
+      { "name": "sm", "value": "768px" },
+      { "name": "md", "value": "992px" },
+      { "name": "lg", "value": "1200px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Barra de Navegação Compacta",
+      "kind": "navigation",
+      "refersTo": "navbar-compact",
+      "description": "Barra superior adesiva de 64px com âncoras suaves e menu responsivo em cartão (< 992px).",
+      "html": "<header class=\"sticky-top bg-white border-bottom\"><nav class=\"navbar navbar-expand-lg\">...</nav></header>",
+      "css": ".navbar-nav .nav-link { font-weight: 500; font-size: 0.95rem; color: #475569; padding: 0.5rem 0.85rem; border-radius: 8px; } .navbar-nav .nav-link:hover { color: #0284c7; background-color: #f1f5f9; }"
+    },
+    {
+      "name": "Abas de Trade-off Técnico e Negócio",
+      "kind": "tabs",
+      "refersTo": "tradeoff-tabs",
+      "description": "Componente interativo tátil com suporte ARIA e teclado para alternar entre desafio de código e impacto comercial.",
+      "html": "<div class=\"trade-off-tabs\" role=\"tablist\"><button class=\"btn btn-tradeoff active\" role=\"tab\" aria-selected=\"true\">Desafio Técnico</button><button class=\"btn btn-tradeoff\" role=\"tab\" aria-selected=\"false\">Impacto no Negócio</button></div>",
+      "css": ".btn-tradeoff { font-size: 0.82rem; font-weight: 600; padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #cbd5e1; background: #ffffff; color: #475569; min-height: 38px; } .btn-tradeoff.active { background: #0284c7; color: #ffffff; border-color: #0284c7; }"
+    },
+    {
+      "name": "Card de Formação em Destaque",
+      "kind": "card",
+      "refersTo": "formacao-destaque",
+      "description": "Cartão com borda superior destacada em Sky 600 e indicador pulsante de status acadêmico atual.",
+      "html": "<div class=\"formacao-card formacao-destaque p-4 rounded-4 bg-white border\">...</div>",
+      "css": ".formacao-card.formacao-destaque { border-top: 4px solid #0284c7 !important; border-color: #cbd5e1; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08); }"
+    },
+    {
+      "name": "Callout de Projeto Real Aplicado",
+      "kind": "callout",
+      "refersTo": "callout-projeto-real",
+      "description": "Bloco de alto contraste com borda lateral verde esmeralda para destacar entregas com clientes reais.",
+      "html": "<div class=\"callout-projeto-real p-3 rounded-3 bg-light border-start border-4 border-success\">...</div>",
+      "css": ".callout-projeto-real { background-color: #f8fafc; border-left: 4px solid #059669 !important; border: 1px solid #e2e8f0; }"
+    },
+    {
+      "name": "Cartão de Fechamento Peak-End",
+      "kind": "card",
+      "refersTo": "cta-closing",
+      "description": "Container conclusivo da jornada que convida líderes e recrutadores ao diálogo e recapitula contatos.",
+      "html": "<div class=\"cta-closing-card p-4 p-md-5 rounded-4 border text-center\">...</div>",
+      "css": ".cta-closing-card { background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); border: 1px solid #e2e8f0; }"
+    },
+    {
+      "name": "Chip de Navegação Rápida",
+      "kind": "chip",
+      "refersTo": "badge-trail",
+      "description": "Tag neutra de alta legibilidade para direcionamento temático instantâneo no Hero.",
+      "html": "<a href=\"#projetos\" class=\"badge-trail text-decoration-none\">Ver Projetos Reais</a>",
+      "css": ".badge-trail { background: #f1f5f9; color: #334155; padding: 6px 14px; border-radius: 9999px; font-size: 0.85rem; font-weight: 500; border: 1px solid #e2e8f0; transition: all 0.2s ease; } .badge-trail:hover { background: #0284c7; color: #ffffff; border-color: #0284c7; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Midimalismo de Engenharia Consolidado",
+    "overview": "O sistema visual combina rigor estrutural de engenharia, acessibilidade estrita WCAG AA (>= 4.54:1) e acabamento tátil em proporção 70% neutro e 30% acentos técnicos. Elimina clichês de IA e adota transparência explícita de trade-offs arquiteturais.",
+    "keyCharacteristics": [
+      "Equilíbrio 70/30 entre sobriedade cinza/ardósia e acentos em Azul Céu e Verde Esmeralda",
+      "Abas táteis inline para trade-offs técnicos acessíveis via mouse, toque e teclado",
+      "Hierarquia visual com destaque de graduação atual e projeto de cliente real",
+      "Resiliência técnica integral com fallbacks SVG, loading lazy e graceful degradation",
+      "Anel global de foco visível padronizado (:focus-visible) para conformidade WCAG 2.4.7"
+    ],
+    "rules": [
+      {
+        "name": "The 70/30 Midimalist Rule",
+        "body": "Cores de acento e saturação jamais devem cobrir mais de 30% da área útil visual, mantendo o restante em bases neutras ardósia/slate.",
+        "section": "colors"
+      },
+      {
+        "name": "The Anti-Slop Texture Rule",
+        "body": "Fundos com textura pontilhada tradicional de IA (radial-gradient) são terminantemente proibidos; adotar superfícies sólidas e gradientes discretos.",
+        "section": "overview"
+      },
+      {
+        "name": "The Touch-First Ergonomics Rule",
+        "body": "Nenhum dado técnico ou trade-off crítico pode depender de :hover de mouse; todos os elementos interativos possuem área de toque >= 44px e suporte a teclado.",
+        "section": "interaction"
+      },
+      {
+        "name": "The Focus Visibility Rule",
+        "body": "Todos os elementos focáveis exibem anel de foco visível com espessura mínima de 2px e contraste AA ao serem navegados por teclado.",
+        "section": "accessibility"
+      }
+    ],
+    "dos": [
+      "Manter a proporção 70% neutro e 30% acentos técnicos calibrados.",
+      "Garantir contraste mínimo de 4.54:1 (WCAG AA) em todos os textos primários.",
+      "Evidenciar trade-offs de engenharia em componentes táteis inline.",
+      "Prover sempre fallbacks para imagens, scripts de rolagem e mídias externas."
+    ],
+    "donts": [
+      "Não usar texturas pontilhadas de IA no fundo (radial-gradient).",
+      "Não ocultar dados críticos de negócio em tooltips dependentes de mouse hover.",
+      "Não usar estilos inline com valores estáticos para posicionamento estrutural.",
+      "Não suprimir o outline de foco nativo sem prover anel :focus-visible substituto."
+    ]
+  }
+}
