@@ -1,20 +1,3 @@
-# Catálogo de Comandos do Impeccable
-
-Este catálogo reúne o estudo aprofundado dos 23 comandos especializados do ecossistema **[Impeccable](https://impeccable.style/docs/)** (além do comando central orquestrador `impeccable`), categorizados rigorosamente de acordo com sua função no ciclo de design e desenvolvimento de interfaces.
-
----
-
-## Sumário das Categorias
-
-- [1. Categoria: Criar](#1-categoria-criar) (`shape`, `impeccable`)
-- [2. Categoria: Avaliar](#2-categoria-avaliar) (`audit`, `critique`)
-- [3. Categoria: Refinar](#3-categoria-refinar) (`animate`, `bolder`, `colorize`, `delight`, `layout`, `overdrive`, `quieter`, `typeset`)
-- [4. Categoria: Simplificar](#4-categoria-simplificar) (`adapt`, `clarify`, `distill`)
-- [5. Categoria: Preparar](#5-categoria-preparar) (`harden`, `onboard`, `optimize`, `polish`)
-- [6. Categoria: Sistematizar](#6-categoria-sistematizar) (`document`, `extract`, `generate`, `init`, `live`)
-
----
-
 ## 1. Categoria: Criar
 
 ### 1.1. shape
