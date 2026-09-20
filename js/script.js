@@ -278,26 +278,40 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // 9. Onboarding: Navegação Rápida por Teclado (Teclas 1 a 5)
-    document.addEventListener('keydown', (e) => {
-        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.ctrlKey || e.altKey || e.metaKey) return;
+    // 9. Onboarding: Navegação Rápida por Teclado (Teclas 1 a 5 e Numpad 1 a 5)
+    window.addEventListener('keydown', (e) => {
+        // Ignora apenas se o usuário estiver digitando em campos de formulário editáveis
+        const activeTag = document.activeElement ? document.activeElement.tagName : '';
+        const isEditable = activeTag === 'INPUT' || activeTag === 'TEXTAREA' || (document.activeElement && document.activeElement.isContentEditable);
+        if (isEditable || e.ctrlKey || e.altKey || e.metaKey) return;
 
         const keyMap = {
             '1': '#sobre',
+            'Digit1': '#sobre',
+            'Numpad1': '#sobre',
             '2': '#conhecimentos',
+            'Digit2': '#conhecimentos',
+            'Numpad2': '#conhecimentos',
             '3': '#projetos',
+            'Digit3': '#projetos',
+            'Numpad3': '#projetos',
             '4': '#experiencias',
-            '5': '#formacao'
+            'Digit4': '#experiencias',
+            'Numpad4': '#experiencias',
+            '5': '#formacao',
+            'Digit5': '#formacao',
+            'Numpad5': '#formacao'
         };
 
-        if (keyMap[e.key]) {
-            const target = document.querySelector(keyMap[e.key]);
+        const targetSelector = keyMap[e.key] || keyMap[e.code];
+        if (targetSelector) {
+            const target = document.querySelector(targetSelector);
             if (target) {
                 e.preventDefault();
                 const navHeight = getNavbarHeight();
-                const pos = e.key === '1' ? 0 : Math.round(target.getBoundingClientRect().top + window.scrollY - navHeight);
+                const pos = targetSelector === '#sobre' ? 0 : Math.round(target.getBoundingClientRect().top + window.scrollY - navHeight);
                 window.scrollTo({ top: pos, behavior: 'smooth' });
-                if (history.pushState) history.pushState(null, '', keyMap[e.key]);
+                if (history.pushState) history.pushState(null, '', targetSelector);
             }
         }
     });
